@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="./css/destyle.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./javascript/main.js">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>甲陽学院中学校 音楽と展覧の会特設ページ</title>
+    <link rel="icon" href="images/favicon.png"> <!-- ファビコン -->
+    
+</head>
+<body>
+    <header class="header"> <!-- ヘッダー　スマホ版はハンバーガーメニュー -->
+        <nav class="header__nav header_pc">
+            <a href="club.html" class="header__nav_link header_pc">文化部紹介</a>
+            <a href="" class="header__nav_link header_pc">演奏</a>
+            <a href="" class="header__nav_link header_pc">スケジュール</a>
+            <a href="" class="header__nav_link header_pc">校内案内図</a>
+            <a href="" class="header__nav_link header_pc">アクセス</a>
+            <a href="" class="header__nav_link header_pc">お問い合わせ</a>
+            <a href="" class="header__nav_link header_pc">お知らせ</a>
+        </nav>
+        
+        <div id="hamburgermenu">
+            <div id="menu-toggle" class="hamburgermenu__icon material-icons"><img src="./images/icon_menu.svg" class="header_sp"></div>
+            <nav class="hamburgermenu__nav">
+                <a href="" class="header__nav_link header_sp">文化部紹介</a>
+                <a href="" class="header__nav_link header_sp">演奏</a>
+                <a href="" class="header__nav_link header_sp">スケジュール</a>
+                <a href="" class="header__nav_link header_sp">校内案内図</a>
+                <a href="" class="header__nav_link header_sp">アクセス</a>
+                <a href="" class="header__nav_link header_sp">お問い合わせ</a>
+                <a href="" class="header__nav_link header_sp">お知らせ</a>
+            </nav>
+            <div id="mask" class="hamburgermenu__mask"></div>
+        </div>
+    </header>
+    <main class="main"> <!-- メイン -->
+        
+
+        <section class="main__cowntdown space"> <!-- カウントダウン（Javascript） -->
+            <p>甲陽学院中学校</p>
+            <p>音楽と展覧の会当日まで</p>
+            <div class="main__cowntdown__day">
+                <p class="main__cowntdown__day_will">あと</p>
+                <!-- <h1 class="main__cowntdown__day_num" id="day"></h1> -->
+                <p class="main__cowntdown__day__container">
+                    <span id="day" class="main__cowntdown__day__container_num"></span>
+                    日
+                    <span id="hour" class="main__cowntdown__day__container_num"></span>
+                    時間
+                    <span id="min" class="main__cowntdown__day__container_num"></span>
+                    分
+                    <span id="sec" class="main__cowntdown__day__container_num"></span>
+                    秒
+                </p>
+                <div class="container">
+                    <div class="box">
+                             <div class="clock"></div>
+                    </div>
+                </div>
+                <!-- <p class="main__cowntdown__day_txt">日</p> -->
+            </div>
+        </section>
+        
+        <article class="main__article space"> <!-- お知らせ的な　食堂いつ　落とし物は　全面禁煙　上履き　講堂電話切れ　 -->
+            <h2 class="news">お知らせ</h2>
+            
+        </article>
+
+        <article>
+            <h2 class="committee">音展委員</h2>
+        </article>
+    </main>
+    <footer class="footer">
+        ©︎甲陽学院中学校
+    </footer>
+    <script src="./javascript/main.js"></script>
+    <script>
+        'use strict';
+
+        function countdown(due) {
+            const now = new Date();
+
+            const rest = due.getTime() - now.getTime();
+            const sec = Math.floor(rest / 1000) % 60;
+            const min = Math.floor(rest / 1000 / 60) % 60;
+            const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+            const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+            const count = [days, hours, min, sec];
+
+            return count;
+        }
+
+        const goal = new Date(2023, 11, 3);
+
+        function recalc() {
+            const counter = countdown(goal);
+            document.getElementById('day').textContent = counter[0];
+            document.getElementById('hour').textContent = counter[1];
+            document.getElementById('min').textContent = String(counter[2]).padStart(2, '0');
+            document.getElementById('sec').textContent = String(counter[3]).padStart(2, '0');
+            refresh();  
+        }
+
+        function refresh() {
+            setTimeout(recalc, 1000);
+        }
+        recalc();
+
+    </script>
+    
+</body>
+</html>

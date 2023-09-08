@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2023年度 音楽と展覧の会</title>
+        <link rel="stylesheet" href="{% static 'main/css/base.css'%}">
+        {% block extra_style %}{% endblock %}
+    </head>
+    <body>
+    {% block header %}
+    {% endblock %}
+    {% block content %}{% endblock %}{# 各ページのメイン要素用ブロック #}
+    {%block footer %}
+    {% endblock %}
+    {% block extra_js %}{% endblock %}{# 追加 JavaScript 用ブロック #}
+    </body>
+</html>
