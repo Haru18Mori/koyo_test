@@ -15,19 +15,29 @@ from .models import Club
 class IndexView(TemplateView):
     template_name = "main/index.html"
 
-class ClubView(TemplateView,ListView):
+class ClubView(ListView):
     template_name = "main/club.html"
     model = Club
-    fields=["name","image","created_at","introduction"]
+    context_object_name = "clubs"
 
     def get_queryset(self):
-        clubs = Club.objects.all.order_by('-created_at')
-        return clubs
-
+        club = super().get_queryset().order_by('order')
+        return club
+    
 class AccessView(TemplateView):
     template_name = "main/access.html"
 
 class MovieView(TemplateView):
     template_name = "main/movie.html"
     
-    
+class MusicView(TemplateView):
+    pass
+
+class ScheduleView(TemplateView):
+    pass
+
+class MapView(TemplateView):
+    pass
+
+class NewsView(TemplateView):
+    pass
