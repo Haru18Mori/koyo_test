@@ -28,7 +28,7 @@
                 </p>
                 <div class="container">
                     <div class="box">
-                             <div class="clock"></div>
+                            <div class="clock"></div>
                     </div>
                 </div>
                 <!-- <p class="main__cowntdown__day_txt">日</p> -->
@@ -38,8 +38,7 @@
             
         </article>
         <article class="main__article space"> <!-- お知らせ的な　食堂いつ　落とし物は　全面禁煙　上履き　講堂電話切れ　 -->
-            <h2 class="news">お知らせ</h2>
-            
+            <h2 class="slideContsL slideConts">お知らせ</h2>
         </article>
 
         <article>
@@ -59,38 +58,6 @@
 {% endblock %}
 {% block extra_js %}{# 追加 JavaScript 用ブロック #}
 
-    <script src="./javascript/main.js"></script>
-    <script>
-        'use strict';
-
-        function countdown(due) {
-            const now = new Date();
-
-            const rest = due.getTime() - now.getTime();
-            const sec = Math.floor(rest / 1000) % 60;
-            const min = Math.floor(rest / 1000 / 60) % 60;
-            const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
-            const days = Math.floor(rest / 1000 / 60 / 60 / 24);
-            const count = [days, hours, min, sec];
-
-            return count;
-        }
-
-        const goal = new Date(2023, 11, 3);
-
-        function recalc() {
-            const counter = countdown(goal);
-            document.getElementById('day').textContent = counter[0];
-            document.getElementById('hour').textContent = counter[1];
-            document.getElementById('min').textContent = String(counter[2]).padStart(2, '0');
-            document.getElementById('sec').textContent = String(counter[3]).padStart(2, '0');
-            refresh();  
-        }
-
-        function refresh() {
-            setTimeout(recalc, 1000);
-        }
-        recalc();
-
-    </script>
+    <script src="{% static 'main/javascript/main.js' %}"></script>
+    
 {% endblock %}   

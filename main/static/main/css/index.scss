@@ -21,7 +21,7 @@
 h2 {
     text-align: left;
     font-size: 32px;
-    transform: translateX(-50px);
+    // transform: translateX(-50px);
 }
 
 .space {
@@ -32,6 +32,7 @@ h2 {
 .header {
     padding-bottom: 5px;
     &__nav {
+        margin-top: 5px;
         display: flex;
         justify-content: space-evenly;
         padding-bottom: 5px;
@@ -100,7 +101,8 @@ h2 {
     overflow-y: auto; /* ナビゲーションが長い場合にスクロールできるようにする */
     transition: 250ms; /* ナビゲーションのスライドイン/アウトにかける秒数 */
     transform: translateX(-100%); /* 横幅と同じ分だけ左側に移動させる */
-    z-index: 2; /* ハンバーガーメニューの要素の中では一番上に表示されるようにする */}
+    z-index: 2; /* ハンバーガーメニューの要素の中では一番上に表示されるようにする */
+}
 
 
 #hamburgermenu.active .hamburgermenu__nav {
@@ -151,6 +153,9 @@ h2 {
     }
 }
 
+// レスポンシブ
+// ================================================================================================================================================
+
 @media screen and (max-width:648px) {
     .header_pc {
         display: none;
@@ -187,3 +192,27 @@ h2 {
         padding-right: 50px;
     }
 }
+
+
+// 
+#wrap {
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    margin: 0 auto;
+  }
+  .slideConts {
+    // width: 500px;
+    height: 400px;
+    margin: 40px auto;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: 1s;
+  }
+  .slideContsL {
+    transform: translate(-800px, 0);
+  }
+  .slideContsL.show {
+    transform: translate(-50px, 0) !important;
+  }
+
