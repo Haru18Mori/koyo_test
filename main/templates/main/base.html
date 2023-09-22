@@ -18,23 +18,23 @@
     {% block header %}
     <header class="header"> <!-- ヘッダー　スマホ版はハンバーガーメニュー -->
         <nav class="header__nav header_pc">
-            <a href="{% url 'home' %}" class="header__nav_link header_pc">ホーム</a>
-            <a href="{% url 'club'%}" class="header__nav_link header_pc">文化部・同好会</a>
-            <a href="{% url 'music'%}" class="header__nav_link header_pc">音楽会</a>
-            <a href="{% url 'map'%}" class="header__nav_link header_pc">校内図</a>
+            <a href="{% url 'home' %}"   class="header__nav_link header_pc">ホーム</a>
+            <a href="{% url 'club'%}"    class="header__nav_link header_pc">文化部・同好会</a>
+            <a href="{% url 'music'%}"   class="header__nav_link header_pc">音楽会</a>
+            <a href="{% url 'map'%}"     class="header__nav_link header_pc">校内図</a>
             <a href="{% url 'access' %}" class="header__nav_link header_pc">アクセス</a>
-            <a href="{% url 'news' %}" class="header__nav_link header_pc">お知らせ</a>
+            <a href="{% url 'news' %}"   class="header__nav_link header_pc">お知らせ</a>
         </nav>
         
         <div id="hamburgermenu">
-            <div id="menu-toggle" class="hamburgermenu__icon material-icons"><img src="./images/icon_menu.svg" class="header_sp"></div>
+            <div id="menu-toggle" class="hamburgermenu__icon material-icons"><img src="{% static 'main/images/icon_menu.svg' %}" class="header_sp"></div>
             <nav class="hamburgermenu__nav">
-                <a href="{% url 'home' %}" class="header__nav_link header_sp">ホーム</a>
-            <a href="{% url 'club'%}" class="header__nav_link header_sp">文化部・同好会</a>
-            <a href="{% url 'music'%}" class="header__nav_link header_sp">音楽会</a>
-            <a href="{% url 'map'%}" class="header__nav_link header_sp">校内図</a>
+            <a href="{% url 'home' %}"   class="header__nav_link header_sp">ホーム</a>
+            <a href="{% url 'club'%}"    class="header__nav_link header_sp">文化部・同好会</a>
+            <a href="{% url 'music'%}"   class="header__nav_link header_sp">音楽会</a>
+            <a href="{% url 'map'%}"     class="header__nav_link header_sp">校内図</a>
             <a href="{% url 'access' %}" class="header__nav_link header_sp">アクセス</a>
-            <a href="{% url 'news' %}" class="header__nav_link header_sp">お知らせ</a>
+            <a href="{% url 'news' %}"   class="header__nav_link header_sp">お知らせ</a>
             </nav>
             <div id="mask" class="hamburgermenu__mask"></div>
         </div>
@@ -45,6 +45,8 @@
     <footer class="footer">
         ©︎甲陽学院中学校
     </footer>
+    <script src="{% static 'main/javascript/main.js' %}"></script>
+
     {% endblock %}
     {% block extra_js %}{% endblock %}{# 追加 JavaScript 用ブロック #}
     </body>

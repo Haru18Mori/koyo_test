@@ -1,7 +1,7 @@
 {% extends "main/base.html" %}{# 継承するテンプレートを指定 #}
 {% load static %}
 
-{% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
+{% block extra_style %}
 <link rel="stylesheet" href="{% static 'main/css/club.css' %}">
 {% endblock %}
 
