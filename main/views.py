@@ -27,11 +27,9 @@ class ClubView(ListView):
 class AccessView(TemplateView):
     template_name = "main/access.html"
 
-class MovieView(TemplateView):
-    template_name = "main/movie.html"
     
 class MusicView(TemplateView):
-    pass
+    template_name = "main/music.html"
 
 class ScheduleView(TemplateView):
     pass
