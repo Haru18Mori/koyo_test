@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./javascript/main.js">
         <link rel="stylesheet" href="{% static 'main/css/base.css'%}">
         <link rel="icon" href="{% static 'main/images/favicon.png' %}"> <!-- ファビコン -->
-
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
         {% block extra_style %}{% endblock %}
     </head>
     <body>
@@ -24,6 +24,8 @@
             <a href="{% url 'map'%}"     class="header__nav_link header_pc">校内図</a>
             <a href="{% url 'access' %}" class="header__nav_link header_pc">アクセス</a>
             <a href="{% url 'news' %}"   class="header__nav_link header_pc">お知らせ</a>
+            <a href="{% url 'gallery'%}" class="header__nav_link header_pc">ギャラリー</a>
+            <a href="{% url 'space' %}"  class="header__nav_link header_pc">空白</a>
         </nav>
         
         <div id="hamburgermenu">
@@ -35,12 +37,17 @@
             <a href="{% url 'map'%}"     class="header__nav_link header_sp">校内図</a>
             <a href="{% url 'access' %}" class="header__nav_link header_sp">アクセス</a>
             <a href="{% url 'news' %}"   class="header__nav_link header_sp">お知らせ</a>
+            <a href="{% url 'gallery'%}" class="header__nav_link header_sp">ギャラリー</a>
+            <a href="{% url 'space' %}"  class="header__nav_link header_sp">空白</a>
+
             </nav>
             <div id="mask" class="hamburgermenu__mask"></div>
         </div>
     </header>
     {% endblock %}
-    {% block content %}{% endblock %}{# 各ページのメイン要素用ブロック #}
+    {% block content %}
+
+    {% endblock %}{# 各ページのメイン要素用ブロック #}
     {%block footer %}
     <footer class="footer">
         ©︎甲陽学院中学校

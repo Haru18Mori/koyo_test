@@ -9,7 +9,7 @@ from django.urls import reverse_lazy
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView
-from .models import Club
+from .models import Club,Photo
 # Create your views here.
 
 class IndexView(TemplateView):
@@ -31,11 +31,21 @@ class AccessView(TemplateView):
 class MusicView(TemplateView):
     template_name = "main/music.html"
 
-class ScheduleView(TemplateView):
-    pass
+class GalleryView(ListView):
+    template_name = "main/gallery.html"
+    paginate_by = 8
+    model = Photo
+    context_object_name = "photos"
+
+    def get_queryset(self):
+        photo = super().get_queryset().order_by('order')
+        return photo
 
 class MapView(TemplateView):
-    pass
+    template_name = "main/map.html"
 
 class NewsView(TemplateView):
-    pass
+    template_name = "main/news.html"
+
+class SpaceView(TemplateView):
+    template_name = "main/space.html"
