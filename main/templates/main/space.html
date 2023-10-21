@@ -1,0 +1,9 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
+<link rel="stylesheet" href="{% static 'main/css/space.css' %}">
+{% endblock %}
+{% block content %}
+
+{% endblock %}

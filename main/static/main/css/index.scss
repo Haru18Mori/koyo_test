@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .sp {
     display: none;
 }
@@ -16,7 +18,21 @@
         url("font/ZenMaruGothic-Regular.ttf");
 }
 
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 
+body {
+  background-color: rgba(253, 252, 252, 0.264);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
 
 h2 {
     text-align: left;
@@ -40,10 +56,8 @@ h2 {
             cursor: pointer;
             transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
             font-size: 16px;
-            // padding: 15px;
             padding-bottom: 5px;
             position: relative;
-            // transition: background 1s;
             font-family: ZenMaruGothic-Medium;
         }
         
@@ -127,6 +141,7 @@ h2 {
 .main {
     padding-left: 100px; 
     padding-right: 100px;
+    padding-bottom: 100px;
 
     &__cowntdown__day {
         display: flex;
@@ -194,25 +209,60 @@ h2 {
 }
 
 
-// 
+
 #wrap {
     position: relative;
     overflow: hidden;
     width: 800px;
     margin: 0 auto;
-  }
-  .slideConts {
+}
+.slideConts {
     // width: 500px;
     height: 400px;
     margin: 40px auto;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: 1s;
-  }
-  .slideContsL {
+}
+.slideContsL {
     transform: translate(-800px, 0);
-  }
-  .slideContsL.show {
+}
+.slideContsL.show {
     transform: translate(-50px, 0) !important;
-  }
+    }
 
+.swiper {
+    position: fixed;
+    margin-left: -100px;
+    margin-right: -100px;
+    width: calc(100% + 200px);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -4;
+    position: fixed;
+    &-wrapper {
+        transform: translate3d(0px,0,0);
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
+    }
+    &-slide img{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        backface-visibility: hidden;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
