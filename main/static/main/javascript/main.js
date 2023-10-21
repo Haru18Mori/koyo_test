@@ -1,4 +1,4 @@
-const menu = document.getElementById("hamburgermenu");
+let menu = document.getElementById("hamburgermenu");
 const toggleIcon = document.getElementById("menu-toggle");
 
 // アイコンがクリックされるとメニューのアクティブ・非アクティブを切り替える。
@@ -20,11 +20,14 @@ function countdown(due) {
     const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
     const days = Math.floor(rest / 1000 / 60 / 60 / 24);
     const count = [days, hours, min, sec];
-
+    
+    console.log(now)
+    console.log(due)
+    console.log(rest)
     return count;
 }
 
-const goal = new Date(2023, 11, 3);
+const goal = new Date(2023, 11-1, 3);
 
 function recalc() {
     const counter = countdown(goal);
@@ -77,3 +80,19 @@ window.addEventListener('scroll', function () {
     }
   }
 });
+
+// ページネーション swiper.js
+
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  effect: "fade",
+  loop: true,
+  autoplay: {
+  delay: 2500,
+  disableOnInteraction: false
+  },
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+  },
+  });
