@@ -15,6 +15,22 @@
   font-family: ZenMaruGothic-Regular;
   src: local(ZenMaruGothic-Regular) url("font/ZenMaruGothic-Regular.ttf");
 }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background-color: rgba(253, 252, 252, 0.264);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
 h2 {
   text-align: left;
   font-size: 32px;
@@ -195,22 +211,6 @@ h2 {
 
 .slideContsL.show {
   transform: translate(-50px, 0) !important;
-}/*# sourceMappingURL=index.css.map */
-
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background-color: rgba(253, 252, 252, 0.264);
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
 }
 
 .swiper {
@@ -223,14 +223,10 @@ body {
   bottom: 0;
   right: 0;
   z-index: -4;
-}
-.swiper {
   position: fixed;
 }
 .swiper-wrapper {
-  transform: translate3d(0px,0,0);
-}
-.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
   background-size: cover;
   position: relative;
   width: 100%;
@@ -239,21 +235,16 @@ body {
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-
-
 }
-.swiper-slide img{
+.swiper-slide img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   backface-visibility: hidden;
-}
-
-.swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=index.css.map */

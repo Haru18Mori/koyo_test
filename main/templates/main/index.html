@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block extra_style %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > -->
+<link rel="stylesheet" href="{% static 'main/css/swiper.css' %}">
+
 <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
@@ -15,18 +17,18 @@
         <!-- swiper.js-->
         <div class="swiper mySwiper" id="swiper">
             <div class="swiper-wrapper" id="swiper-wrapper">
-              <div class="swiper-slide" id="swiper-slide">
-                <img src="{% static 'main/images/swiper/20231005_142604.jpg'%}" />
-              </div>
-              <div class="swiper-slide" id="swiper-slide">
-                <img src="{% static 'main/images/swiper/20231005_145234.jpg'%}" />
-              </div>
-              <div class="swiper-slide" id="swiper-slide">
-                <img src="{% static 'main/images/swiper/20231005_145559.jpg'%}" />
-              </div>
-              <div class="swiper-slide" id="swiper-slide">
-                <img src="{% static 'main/images/swiper/20231005_145712.jpg'%}" />
-              </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_142604.jpg'%}" />
+                </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_145234.jpg'%}" />
+                </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_145559.jpg'%}" />
+                </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_145712.jpg'%}" />
+                </div>
             </div>
             
         </div>
