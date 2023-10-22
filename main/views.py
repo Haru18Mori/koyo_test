@@ -8,6 +8,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import reverse_lazy  
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
 from .models import Club,Photo
 # Create your views here.
@@ -24,6 +25,16 @@ class ClubView(ListView):
         club = super().get_queryset().order_by('order')
         return club
     
+class ClubDetailView(DetailView):
+    model = Club
+    
+    # def post(self, request, **kwargs):
+    #     print(self.kwargs["pk"]) # ←このような形で取得可能
+
+    #     # 詳細画面へ遷移させる
+    #     return redirect('club__detail', pk=self.kwargs["pk"])
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs)
 class AccessView(TemplateView):
     template_name = "main/access.html"
 

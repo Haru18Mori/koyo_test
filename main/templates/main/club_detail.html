@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extra_style %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/club_detail.css' %}">
+{% endblock %}
+{% block content %}
+<div class="club-detail">
+    <div class="club-img">
+    {% if object.image %}
+        <img src="{{ object.image.url }}"/>
+    {% else %}
+        <img src="{% static 'main/images/no_image.png' %}"/>
+    {% endif %}
+    </div>
+    <p class="name">{{ club.name }}</p>
+    <p>{{ club.introduction }}</p>
+</div>
+{% endblock %}

@@ -8,6 +8,8 @@ class Club(models.Model):
     image = models.ImageField(verbose_name="活動写真", upload_to="images/")
     order = models.FloatField(verbose_name="優先順位",default=0)
     introduction = models.CharField(max_length=150,verbose_name="紹介文")
+    slug = models.SlugField(max_length=256, null=True, unique=True)
+
     def __str__(self):
         return self.name
     def get_absolute_url(self):
