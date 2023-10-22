@@ -1,0 +1,39 @@
+@font-face {
+    font-family: ZenMaruGothic-Medium;
+    src: local(ZenMaruGothic-Medium)
+        url("font/ZenMaruGothic-Medium.ttf");
+}
+@font-face {
+    font-family: ZenMaruGothic-Regular;
+    src: local(ZenMaruGothic-Regular)
+        url("font/ZenMaruGothic-Regular.ttf");
+}
+
+
+
+h2 {
+    animation-name:fadeLeftAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    font-family: ZenMaruGothic-Medium;
+    }
+    
+    @keyframes fadeLeftAnime{
+        from {
+        opacity: 0;
+        transform: translateX(-100px);
+        }
+    
+        to {
+        opacity: 1;
+        transform: translateX(10vw);
+        }
+    }
+
+.map {
+    &_img {
+        width: 80vw;
+    }
+}
+
