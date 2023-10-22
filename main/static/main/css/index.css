@@ -6,14 +6,10 @@
 .header_sp {
   display: none;
 }
-#school-name {
-  font-size: 50px;
-  position: absolute;
-}
+
 @font-face {
   font-family: ZenMaruGothic-Medium;
-  /* src: local(ZenMaruGothic-Medium) url("font/ZenMaruGothic-Medium.ttf"); */
-  src: local(/Users/moritatarou/Projects/Django/koyo_test/main/static/main/font/ZenMaruGothic-Medium.ttf);
+  src: local(ZenMaruGothic-Medium) url("font/ZenMaruGothic-Medium.ttf");
 }
 @font-face {
   font-family: ZenMaruGothic-Regular;
@@ -39,9 +35,7 @@ h2 {
   text-align: left;
   font-size: 32px;
 }
-p {
-  font-size: 25px;
-}
+
 .space {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -51,10 +45,11 @@ p {
   padding-bottom: 5px;
 }
 .header__nav {
-  margin-top: 5px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.49);
 }
 .header__nav_link {
   cursor: pointer;
@@ -88,11 +83,6 @@ p {
   height: 40px;
 }
 
-.theme {
-  font-size: 100px;
-  position: absolute;
-  text-align: center center;
-}
 /* 要素のサイズ計算を容易にする */
 #hamburgermenu,
 #hamburgermenu * {
@@ -234,8 +224,7 @@ p {
   bottom: 0;
   right: 0;
   z-index: -4;
-  background: rgba(255, 255, 255, 0.5);
-  transition: opacity .6s ease;
+  position: fixed;
 }
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
@@ -247,9 +236,6 @@ p {
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-}
-.swiper-mask:hover{
-  opacity: 1;
 }
 .swiper-slide img {
   background-position: center;
