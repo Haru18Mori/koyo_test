@@ -2,9 +2,8 @@
 {% load static %}
 
 {% block extra_style %}
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > -->
-<link rel="stylesheet" href="{% static 'main/css/swiper.css' %}">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" >
+<!-- <link rel="stylesheet" href="{% static 'main/css/swiper.css' %}"> -->
 <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
@@ -29,14 +28,20 @@
                 <div class="swiper-slide" id="swiper-slide">
                     <img src="{% static 'main/images/swiper/20231005_145712.jpg'%}" />
                 </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/修正20231005_145338[77].jpg'%}" />
+                </div>
             </div>
             
         </div>
+        <div id="swiper-mask" class="swiper swiper-mask"></div>
+        <div id="swiper-hide-mask" class="swiper-hide-mask"></div>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         
 
         <section class="main__cowntdown space"> <!-- カウントダウン（Javascript） -->
-            <p>甲陽学院中学校</p>
+            <p id="school_name"><strong>甲陽学院中学校</strong></p>
             <p>音楽と展覧の会当日まで</p>
             <div class="main__cowntdown__day">
                 <p class="main__cowntdown__day_will">あと</p>
@@ -61,7 +66,7 @@
         </section>
         <article>
         <h2>今年のテーマは</h2>
-        <h2 id="theme">  飛躍</h2>    
+        <h2 class="theme">  飛躍</h2>    
         </article>
         <article class="main__article space"> <!-- お知らせ的な　食堂いつ　落とし物は　全面禁煙　上履き　講堂電話切れ　 -->
             <h2 class="slideContsL slideConts">お知らせ</h2>
