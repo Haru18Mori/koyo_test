@@ -1,13 +1,38 @@
 {% extends "main/base.html" %}{# 継承するテンプレートを指定 #}
 {% load static %}
 
-{% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
+{% block extra_style %}
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > -->
+<link rel="stylesheet" href="{% static 'main/css/swiper.css' %}">
+
 <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
 {% endblock %}
 
 {% block content %}{# index ページの中身を記述 #}
 
     <main class="main"> <!-- メイン -->
+        
+        <!-- swiper.js-->
+        <div class="swiper mySwiper" id="swiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_142604.jpg'%}" />
+                </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_145234.jpg'%}" />
+                </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_145559.jpg'%}" />
+                </div>
+                <div class="swiper-slide" id="swiper-slide">
+                    <img src="{% static 'main/images/swiper/20231005_145712.jpg'%}" />
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         
 
         <section class="main__cowntdown space"> <!-- カウントダウン（Javascript） -->
@@ -35,7 +60,8 @@
             </div>
         </section>
         <article>
-            
+        <h2>今年のテーマは</h2>
+        <h2 id="theme">  飛躍</h2>    
         </article>
         <article class="main__article space"> <!-- お知らせ的な　食堂いつ　落とし物は　全面禁煙　上履き　講堂電話切れ　 -->
             <h2 class="slideContsL slideConts">お知らせ</h2>
@@ -43,21 +69,34 @@
 
         <article>
             <h2 class="committee">音展委員</h2>
-            <p>音展委員長:</p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>音展委員長:正木</p>
+            <p>受付・案内:中村</p>
+            <p>音楽会:小林</p>
+            <p>放送委員会:佐野</p>
+            <p>図書委員会:田中</p>
+            <p>2年音展委員企画:横井</p>
+            <p>2年合宿展示:相沢</p>
+            <p>1年合宿展示:秋山</p>
+            <p>体育館アトラクション:多々納</p>
+            <p>光庭モニュメント:矢守</p>
+            <p>モザイク:久保田</p>
+            <p>キャップアート:荒井</p>
+            <p>ガラスブロック装飾:鵜川</p>
+            <p>階段装飾:利岡</p>
+            <p>ウォータークーラー装飾:田中</p>
+            <p>ステンドグラス装飾:長田</p>
+            <p>休憩室アンケート:土屋</p>
+            <p>教師特集:南</p>
+            <p>甲陽生の一日:岡本</p>
+            <p>ピタゴラスイッチ:加藤</p>
+            <p>クイズ:黒瀬</p>
+            <p>PR動画:吉井</p>
 
         </article>
     </main>
 {% endblock %}
 {% block extra_js %}{# 追加 JavaScript 用ブロック #}
 
-    <script src="{% static 'main/javascript/main.js' %}"></script>
+    <!-- <script src="{% static 'main/javascript/main.js' %}"></script> -->
     
 {% endblock %}   

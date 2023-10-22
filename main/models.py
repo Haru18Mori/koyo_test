@@ -12,4 +12,8 @@ class Club(models.Model):
         return self.name
     def get_absolute_url(self):
         return reverse()
-    
+
+class Photo(models.Model):
+    name = models.CharField(verbose_name="場所",max_length=20)  
+    image = models.ImageField(verbose_name="写真", upload_to="images/")
+    order = models.FloatField(verbose_name="優先順位",default=0)
