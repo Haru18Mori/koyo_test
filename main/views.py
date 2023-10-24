@@ -27,14 +27,26 @@ class ClubView(ListView):
     
 class ClubDetailView(DetailView):
     model = Club
+    template_name = "main/club__detail.html"
+    context_object_name = "club"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)  # 親クラスのメソッドを呼び出してコンテキストを取得
+        
+        data_list = Club.objects.filter(id=self.kwargs["pk"])  # データをフィルタリングして取得
+        context["club_data_list"] = data_list  # コンテキストにデータを追加
+        
+        return context  # 最終的なコンテキストを返す
+
+    
     
     # def post(self, request, **kwargs):
     #     print(self.kwargs["pk"]) # ←このような形で取得可能
 
     #     # 詳細画面へ遷移させる
     #     return redirect('club__detail', pk=self.kwargs["pk"])
-    def get_context_data(self, **kwargs):
-        return super().get_context_data(**kwargs)
+    
+    
 class AccessView(TemplateView):
     template_name = "main/access.html"
 
@@ -58,5 +70,5 @@ class MapView(TemplateView):
 class NewsView(TemplateView):
     template_name = "main/news.html"
 
-class SpaceView(TemplateView):
-    template_name = "main/space.html"
+# class SpaceView(TemplateView):
+#     template_name = "main/space.html"
