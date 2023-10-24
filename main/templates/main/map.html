@@ -8,8 +8,24 @@
 {% block content %}
 
 <h2 >校内地図</h2>
-<div class="map">
-    <img src="{% static 'main/images/map/東校舎1階.jpeg' %}" class="map_img">
-</div>
+<section>
+    <div class="bar">
+        <div class="bar__east">
+            <button class="bar__east_btn bar_all bar_bor1" id="bar__content1">東校舎1階</button>
+            <button class="bar__east_btn bar_all bar_bor2" id="bar__content2">東校舎2階</button>
+        </div>
+        <div class="bar__west">
+            <button class="bar__west_btn bar_all" id="bar__content3">西校舎1階</button>
+        </div>
+    </div>
+    
+    <div class="map">
+        <img class="map_img" id="img1" src="{% static 'main/images/map/東校舎1階.jpeg' %}" >
+        <img class="map_img" id="img2" src="{% static 'main/images/map/東校舎2階.jpeg' %}" >
+        <img class="map_img" id="img3" src="{% static 'main/images/map/西校舎1階.jpeg' %}" >
+    </div>
+    
+</section>
 
+<script src="{% static 'main/javascript/map.js' %}"></script>
 {% endblock %}
