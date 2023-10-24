@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(233, 254, 249, 0.8);
+}
+
 .club-detail {
     padding: 64px 0 96px;
 }
@@ -14,13 +18,21 @@
     object-fit: contain;
 }
 
+.back {
+    font-size: large;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
 p {
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .club-detail > .name {
     font-weight: bold;
-    font-size: 20px;
+    font-size: x-large;
 }
+
 

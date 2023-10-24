@@ -7,4 +7,12 @@ body {
     background:linear-gradient(90deg, rgba(22, 135, 237, 0.25), rgba(20, 55, 90, 0.9)) ,url(tom-winckels-I7oLRdM9YIw-unsplash.jpg);
     background-size: cover;
     transition: opacity .6s ease;
+    background-repeat: no-repeat;
 }
+
+/* .access_local {
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+} */

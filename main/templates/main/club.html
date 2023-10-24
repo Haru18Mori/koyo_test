@@ -10,7 +10,7 @@
   <div class="club__list-item">
     {% for club in clubs %}
     <div class="container">
-      <a href="{% url 'club_detail' club.pk %}">
+      <a href="{% url 'club__detail' club.pk %}">
         <div class="item">
           {% if club.image %}
             <img src="{{ club.image.url }}" class="club__image"/>

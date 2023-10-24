@@ -11,7 +11,7 @@ urlpatterns = [
     path("map",views.MapView.as_view(),name="map"),
     path("news",views.NewsView.as_view(),name="news"),
     path("gallery",views.GalleryView.as_view(),name="gallery"),
-    path("space", views.SpaceView.as_view(),name="space"),
+    # path("space", views.SpaceView.as_view(),name="space"),
 ]   
 
 
