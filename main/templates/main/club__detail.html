@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extra_style %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/club_detail.css' %}">
+{% endblock %}
+{% block content %}
+<div class="club-detail">
+    <a href="{% url 'club'%}" class="back"><strong>←</strong>クラブ一覧に戻る</a>
+    <div class="club-img">
+    {% if object.image %}
+        <img src="{{ club.image.url }}" class="image"/>
+    {% else %}
+        <img src="{% static 'main/images/no_image.png' %}" class="image"/>
+    {% endif %}
+    </div>
+    <p class="name">部活名：  {{ club.name }}</p>
+    <p class="introduction">部活の紹介：  {{ club.introduction }}</p>
+    <p class="question">{{ club.question }}</p>
+    <p class="question1">{{ club.question1 }}</p>
+    <p class="question2">{{ club.question2 }}</p>
+    <p class="question3">{{ club.question3 }}</p>
+    <p class="question4">{{ club.question4 }}</p>
+
+
+</div>
+{% endblock %}
