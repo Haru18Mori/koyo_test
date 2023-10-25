@@ -1,35 +1,101 @@
 body {
     position: relative;
     height: 100%;
-  }
-
-  body {
     background: #ffffff;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
-    
   }
 
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
 
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-  }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-  }
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
 
 .header__nav {
   padding-top: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.49);
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.49);
+  /* position: fixed; */
+  z-index: 999;
+
+}
+.header__nav.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+}
+.header__nav.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.head {
+  animation-name:fadeLeftAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  border-bottom: solid 2px rgba(0 128 0 / 34%);
+  background-color: rgb(17 44 212 / 3%);
+  width: 80vw;
+  margin-bottom: 50px;
+  padding: 10px;
+  font-size: 27px;
+  }
+  @keyframes fadeLeftAnime{
+    from {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateX(10vw);
+    }
+}
+
+footer {
+  margin-top: 100px;
+  background-color: rgb(48, 48, 48);
+  height: 500px;
+  width: 100vw;
+  color: rgb(226, 226, 226);
+  padding: 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+footer > p {
+  color: rgb(226, 226, 226);
+  margin-bottom: 20px;
 }
