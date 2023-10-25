@@ -3,29 +3,33 @@
 
 {% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
 <link rel="stylesheet" href="{% static 'main/css/map.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+
 {% endblock %}
 
 {% block content %}
+<main>
+    <h3 class="head">校内地図</h3>
+    <section>
+        <div class="bar">
+            <div class="bar__east">
+                <button class="bar__east_btn bar_all bar_bor1" id="bar__content1">東校舎1階</button>
+                <button class="bar__east_btn bar_all bar_bor2" id="bar__content2">東校舎2階</button>
+            </div>
+            <div class="bar__west">
+                <button class="bar__west_btn bar_all" id="bar__content3">西校舎1階</button>
+            </div>
+        </div>
+        
+        <div class="map">
+            <img class="map_img" id="img1" src="{% static 'main/images/map/東校舎1階.jpeg' %}" >
+            <img class="map_img" id="img2" src="{% static 'main/images/map/東校舎2階.jpeg' %}" >
+            <img class="map_img" id="img3" src="{% static 'main/images/map/西校舎1階.jpeg' %}" >
+        </div>
+        
+    </section>
 
-<h2 >校内地図</h2>
-<section>
-    <div class="bar">
-        <div class="bar__east">
-            <button class="bar__east_btn bar_all bar_bor1" id="bar__content1">東校舎1階</button>
-            <button class="bar__east_btn bar_all bar_bor2" id="bar__content2">東校舎2階</button>
-        </div>
-        <div class="bar__west">
-            <button class="bar__west_btn bar_all" id="bar__content3">西校舎1階</button>
-        </div>
-    </div>
-    
-    <div class="map">
-        <img class="map_img" id="img1" src="{% static 'main/images/map/東校舎1階.jpeg' %}" >
-        <img class="map_img" id="img2" src="{% static 'main/images/map/東校舎2階.jpeg' %}" >
-        <img class="map_img" id="img3" src="{% static 'main/images/map/西校舎1階.jpeg' %}" >
-    </div>
-    
-</section>
+</main>
 
 <script src="{% static 'main/javascript/map.js' %}"></script>
 {% endblock %}
