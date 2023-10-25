@@ -2,10 +2,108 @@
 {% load static %}
 
 {% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
-<link rel="stylesheet" href="{% static 'main/css/music.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/music.css' %}"> 
+<link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+
 {% endblock %}
 
 {% block content %}
+<main>
+    <h3 class="head">音楽会</h2>
+    <section>
+        <table class="table">
+            <caption class="table_name">音楽会 演奏順</caption>
+            <tr>
+                <td>1.</td><td>個人演奏</td><td>1D</td><td>嶋井 雅慶</td>
+            </tr>
+            <tr>
+                <td>2.</td><td>個人演奏</td><td>1C</td><td>鵜澤 陽樹</td>
+            </tr>
+            <tr>
+                <td>3.</td><td>個人演奏</td><td>2A</td><td>立花 祐馬</td>
+            </tr>
+            <tr>
+                <td>4.</td><td>個人演奏</td><td>1E</td><td>中野 裕翔</td>
+            </tr>
+            <tr>
+                <td>5.</td><td>クラス合奏</td><td>3A</td><td>正木 俊太</td>
+            </tr>
+            <tr>
+                <td>6.</td><td>クラス合奏</td><td>1E</td><td>中嶋 悠晴</td>
+            </tr>
+            <tr>
+                <td>7.</td><td>クラス合奏</td><td>1C</td><td>鵜澤 陽樹</td>
+            </tr>
+            <tr>
+                <td>8.</td><td>クラス合奏</td><td>2B</td><td>森 敦也</td>
+            </tr>
+            <tr>
+                <td>9.</td><td>クラス合奏</td><td>3D</td><td>鵜川 賢人</td>
+            </tr>
+            <tr>
+                <td>10.</td><td>個人演奏</td><td>2B</td><td>佐々木 崚成</td>
+            </tr>
+            <tr>
+                <td>11.</td><td>個人演奏</td><td>3C</td><td>小林 堅</td>
+            </tr>
+            <tr>
+                <td>12.</td><td>個人演奏</td><td>1A</td><td>鈴木 孝</td>
+            </tr>
+            <tr>
+                <td>13.</td><td>クラス合奏</td><td>2A</td><td>吉田 悠一郎</td>
+            </tr>
+            <tr>
+                <td>14.</td><td>クラス合奏</td><td>3E</td><td>戸田 光樹</td>
+            </tr>
+            <tr>
+                <td>15.</td><td>クラス合奏</td><td>2C</td><td>延岡 令真</td>
+            </tr>
+            <tr>
+                <td>16.</td><td>クラス合奏</td><td>3C</td><td>吉田 智貴</td>
+            </tr>
+            <tr>
+                <td>17.</td><td>クラス合奏</td><td>1A</td><td>藤田 曜己</td>
+            </tr>
+            <tr>
+                <td>18.</td><td>個人演奏</td><td>3C</td><td>安國 真幸</td>
+            </tr>
+            <tr>
+                <td>19.</td><td>個人演奏</td><td>2D</td><td>吉田 聖太朗</td>
+            </tr>
+            <tr>
+                <td>20.</td><td>個人演奏</td><td>3C</td><td>原 孝汰郎</td>
+            </tr>
+            <tr>
+                <td>21.</td><td>個人演奏</td><td>3B</td><td>久保田 透真</td>
+            </tr>
+            <tr>
+                <td>22.</td><td>クラス合奏</td><td>1B</td><td>岩本 侑士</td>
+            </tr>
+            <tr>
+                <td>23.</td><td>クラス合奏</td><td>1D</td><td>松浦 啓隼</td>
+            </tr>
+            <tr>
+                <td>24.</td><td>クラス合奏</td><td>2E</td><td>樫脇 心</td>
+            </tr>
+            <tr>
+                <td>25.</td><td>クラス合奏</td><td>2D</td><td>西原 一瑛</td>
+            </tr>
+            <tr>
+                <td>26.</td><td>クラス合奏</td><td>3B</td><td>田中 志侑</td>
+            </tr>
+            <tr>
+                <td>27.</td><td>個人演奏</td><td>3A</td><td>大澤 悠生</td>
+            </tr>
+            <tr>
+                <td>28.</td><td>個人演奏</td><td>3B</td><td>髙瀬 真翔</td>
+            </tr>
+            
+            
+        </table>
+        
+    </section>
+
+</main>
 
 {% endblock %}
 
