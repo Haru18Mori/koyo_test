@@ -11,29 +11,6 @@
 
 
 
-h2 {
-    animation-name:fadeLeftAnime;
-    animation-duration:1.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-    border-bottom: solid 2px rgba(0 128 0 / 34%);
-    background-color: rgb(17 44 212 / 3%);
-    width: 80vw;
-    margin-bottom: 100px;
-    padding: 10px;
-    }
-    
-    @keyframes fadeLeftAnime{
-        from {
-        opacity: 0;
-        transform: translateX(-100px);
-        }
-    
-        to {
-        opacity: 1;
-        transform: translateX(10vw);
-        }
-    }
 section {
     .bar {
         display: flex;
@@ -41,6 +18,9 @@ section {
         &_all {
             font-size: 14px;
             padding: 10px 30px 10px;
+            &:hover {
+                background-color: rgba(0 128 0 / 7%);
+            }
             
         }
         &__east {
@@ -77,8 +57,7 @@ section {
     
 }
 .bar__content-active {
-    color: #28c04a;
-    background-color: #000000;
+    background-color: rgba(0 128 0 / 20%);
 }
 
 .map {
@@ -88,13 +67,4 @@ section {
     display: block;
 }
 
-header ul li {
-    cursor: pointer;
-    font-size: 2rem;
-    list-style: none;
-    display: inline-block;
-    margin: 1em;
-    background-color: gray;
-    padding: 0.5em;
-}
 
