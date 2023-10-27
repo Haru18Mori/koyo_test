@@ -21,10 +21,6 @@ body {
   height: 100%;
 }
 
-p {
-  font-size: large;
-}
-
 body {
   background-color: rgba(253, 252, 252, 0.264);
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -49,8 +45,7 @@ h2 {
 .theme {
   font-size: 100px;
   position: absolute;
-  left: 45%;
-  margin: 0;
+  left: 100px;
 }
 
 .space {
@@ -60,13 +55,6 @@ h2 {
 
 .header {
   padding-bottom: 5px;
-}
-.header__nav {
-  padding-top: 5px;
-  display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 5px;
-  background-color: rgba(255, 255, 255, 0.49);
 }
 .header__nav_link {
   cursor: pointer;
@@ -218,9 +206,8 @@ h2 {
 }
 
 .slideConts {
-  /* height: 400px; */
+  height: 200px;
   margin: 40px auto;
-  margin-left: 50px;
   transition: 1s;
 }
 
@@ -229,7 +216,7 @@ h2 {
 }
 
 .slideContsL.show {
-  transform: translate(-50px, 0) !important;
+  transform: translate(0px, 0) !important;
 }
 
 .swiper {
@@ -243,11 +230,11 @@ h2 {
   right: 0;
   z-index: -4;
   position: fixed;
-  background-color: rgba(256, 256, 256, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
-  background-color: rgba(256, 256, 256, 0.264);
+  background-color: rgba(255, 255, 255, 0.264);
   background-size: cover;
   position: relative;
   width: 100%;
