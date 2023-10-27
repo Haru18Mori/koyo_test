@@ -243,7 +243,9 @@ h2 {
 .slideContsL.show {
     transform: translate(-0px, 0) !important;
     }
-
+p.slideContsL.slideConts.show {
+    font-size: large;
+}
 .swiper {
     position: fixed;
     margin-left: -100px;
