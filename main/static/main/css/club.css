@@ -5,7 +5,8 @@
 }
 
 body {
-  background:rgba(248, 255, 245, 0.8);
+  color: #555;
+  background: #effcfa;
   text-align: center;
   font-family: "Roboto Mono";
   padding: 1em;
