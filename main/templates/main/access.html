@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block extra_style %}
+<link rel="stylesheet" href="{% static 'main/css/base.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/access.css' %}">
 {% endblock %}
 {% block content %}
 <main>
     <body>
-        <h2><strong>アクセス </strong></h2> 
+        <h3 class="head">アクセス</h2>
         <p>阪急電鉄神戸線「夙川」駅から南に徒歩約15分</p>
         <p>阪神電鉄「香櫨園」駅から南に徒歩約10分</p>
         <p>校内への車の乗り入れは全面禁止にしております</p>
