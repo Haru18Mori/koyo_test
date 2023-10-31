@@ -56,7 +56,6 @@ class MusicView(TemplateView):
 
 class GalleryView(ListView):
     template_name = "main/gallery.html"
-    paginate_by = 8
     model = Photo
     context_object_name = "photos"
 
