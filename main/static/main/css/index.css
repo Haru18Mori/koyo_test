@@ -20,12 +20,24 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 h2 {
   text-align: left;
-  font-size: 27px;
+  font-size: 32px;
+}
+
+.pre_theme {
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.theme {
+  font-size: 100px;
+  position: absolute;
+  left: 170px;
 }
 
 .space {
@@ -186,7 +198,7 @@ h2 {
 }
 
 .slideConts {
-  height: 400px;
+  height: 200px;
   margin: 40px auto;
   transition: 1s;
 }
@@ -196,7 +208,11 @@ h2 {
 }
 
 .slideContsL.show {
-  transform: translate(-50px, 0) !important;
+  transform: translate(0px, 0) !important;
+}
+
+p.slideContsL.slideConts.show {
+  font-size: large;
 }
 
 .swiper {
@@ -210,14 +226,16 @@ h2 {
   right: 0;
   z-index: -4;
   position: fixed;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
+  background-color: rgba(255, 255, 255, 0.264);
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 6;
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
