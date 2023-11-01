@@ -6,12 +6,23 @@
 {% endblock %}
 
 {% block content %}
-  {% for club in clubs %}
-  <div class="container">
-    <div class="item">
-      <img src="{{ club.image.url }}">
-      <div class="club_names">{{ club.name}}</div>
+<h3 class="head">文化部・同好会</h2>
+<div class="club">
+  <div class="club__list-item">
+    {% for club in clubs %}
+    <div class="container">
+      <a href="{% url 'club__detail' club.pk %}">
+        <div class="item">
+          {% if club.image %}
+            <img src="{{ club.image.url }}" class="club__image"/>
+          {% else %}
+            <img src="{% static 'main/images/no_image.png' %}" class="club__image"/>
+          {% endif %}
+        </div>
+        <p class="club_names">{{ club.name}}</p>
+      </a>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
+</div>
 {% endblock %}

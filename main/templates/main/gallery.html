@@ -2,16 +2,20 @@
 {% load static %}
 
 {% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
+<link rel="stylesheet" href="{% static 'main/css/base.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/gallery.css' %}">
 {% endblock %}
 
 {% block content %}
-{% for photo in photos %}
+<h3 class="head">ギャラリー</h2>
 <div class="container">
-  <div class="item">
-    <img src="{{ photo.image.url }}">
-    <div class="photo_names">{{ photo.name}}</div>
-  </div>
+{% for photo in photos %}
+
+<div class="item">
+  <img src="{{ photo.image.url }}" class="image">
+  <div class="photo_names">{{ photo.name}}</div>
 </div>
 {% endfor %}
+</div>
+
 {% endblock %}
