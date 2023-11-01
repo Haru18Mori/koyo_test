@@ -12,14 +12,14 @@
         <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
         <link rel="stylesheet" href="./javascript/main.js">
         <link rel="stylesheet" href="{% static 'main/css/base.css'%}">
-        <link rel="icon" href="{% static 'main/images/favicon.png' %}"> <!-- ファビコン -->
+        <link rel="icon" href="{% static 'main/images/favicon.png' %}"> 
         <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
         
         {% block extra_style %}{% endblock %}
     </head>
-    <body>
+    <body oncontextmenu="return false;" oncopy="return false;">
     {% block header %}
-    <header class="header"> <!-- ヘッダー　スマホ版はハンバーガーメニュー -->
+    <header class="header"> 
         <nav class="header__nav header_pc">
             <a href="{% url 'home' %}"   class="header__nav_link header_pc">ホーム</a>
             <a href="{% url 'club'%}"    class="header__nav_link header_pc">文化部・同好会</a>

@@ -1,20 +1,6 @@
-@font-face {
-    font-family: ZenMaruGothic-Medium;
-    src: local(ZenMaruGothic-Medium)
-        url("font/ZenMaruGothic-Medium.ttf");
-}
-@font-face {
-    font-family: ZenMaruGothic-Regular;
-    src: local(ZenMaruGothic-Regular)
-        url("font/ZenMaruGothic-Regular.ttf");
-}
-
-
-
 section {
     .bar {
-        display: flex;
-        justify-content: center;
+        
         &_all {
             font-size: 14px;
             padding: 10px 30px 10px;
@@ -47,10 +33,12 @@ section {
         }
     }
     .map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         &_img {
-            width: 80vw;
-            margin-right: auto;
-            margin-left: auto;
+            width: 60vw;
+            
         }
     }
     
@@ -60,11 +48,258 @@ section {
     background-color: rgba(0 128 0 / 20%);
 }
 
+
 .map {
-    display: none;
-}
-.img-active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;
+        &_button {
+            font-size: 14px;
+            padding: 10px 30px 10px;
+            border: solid 1px;
+            &:hover {
+                background-color: rgba(0 128 0 / 7%);
+            }
+        }
+        &__area {
+            position: relative;
+            &_img {
+                width: 80vw;
+            }
+            &_txt1 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 30.2%;
+            }
+            &_txt2 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 38%;
+            }
+            &_txt3 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 43%;
+            }
+            &_txt4 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 48.3%;
+            }
+            &_txt5 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 53.4%;
+            }
+            &_txt6 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 58.6%;
+            }
+            &_txt7 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 63.7%;
+            }
+            &_txt8 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 51%;
+            }
+            &_txt9 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 58.6%;
+            }
+            &_txt10 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 63.6%;
+            }
+            &_txt11 {
+                position: absolute;
+                color: black;
+                top: 39.2%;
+                left: 86.8%;
+            }
+            &_txt12 {
+                position: absolute;
+                color: black;
+                top: 47.7%;
+                left: 88%;
+            }
+            &_txt13 {
+                position: absolute;
+                color: black;
+                top: 71%;
+                left: 88%;
+            }
+            &_txt14 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 28%;
+            }
+            &_txt15 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 33%;
+            }
+            &_txt16 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 38%;
+            }
+            &_txt17 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 43%;
+            }
+            &_txt18 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 51%;
+            }
+            &_txt19 {
+                position: absolute;
+                color: black;
+                top: 14%;
+                left: 61%;
+            }
+            &_txt20 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 28%;
+            }
+            &_txt21 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 33%;
+            }
+            &_txt22 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 38%;
+            }
+            &_txt23 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 43%;
+            }
+            &_txt24 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 51%;
+            }
+            &_txt25 {
+                position: absolute;
+                color: black;
+                top: 43.2%;
+                left: 61%;
+            }
+            &_txt26 {
+                position: absolute;
+                color: black;
+                top: 39.2%;
+                left: 86.8%;
+            }
+            &_txt27 {
+                position: absolute;
+                color: black;
+                top: 47.7%;
+                left: 88%;
+            }
+            &_txt28 {
+                position: absolute;
+                color: black;
+                top: 75%;
+                left: 75%;
+            }
+            &_txt29 {
+                position: absolute;
+                color: black;
+                top: 72%;
+                left: 60%;
+            }
+            &_txt30 {
+                position: absolute;
+                color: black;
+                top: 51%;
+                left: 15%;
+            }
+            &_txt31 {
+                position: absolute;
+                color: black;
+                top: 41%;
+                left: 39%;
+            }
+            &_txt32 {
+                position: absolute;
+                color: black;
+                top: 50%;
+                left: 43%;
+            }
+            &_txt33 {
+                position: absolute;
+                color: black;
+                top: 50%;
+                left: 46%;
+            }
+            &_txt34 {
+                position: absolute;
+                color: black;
+                top: 61%;
+                left: 79%;
+            }
+            &_txt35 {
+                position: absolute;
+                color: black;
+                top: 61%;
+                left: 82%;
+            }
+            &_txt {
+                font-size: 15px;
+            }
+            
+            
+        }
+        &__detail {
+            
+            & > p {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+        }
+        
+    }
 }
 
-
+@media screen and (max-width:525px) {
+    .map__content__area_txt {
+        font-size: 11px;
+    }
+}
