@@ -2,8 +2,9 @@
 {% load static %}
 
 {% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
-<link rel="stylesheet" href="{% static 'main/css/map.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/map.css' %}">
+
 
 {% endblock %}
 
@@ -11,20 +12,105 @@
 <main>
     <h3 class="head">校内地図</h3>
     <section>
-        <div class="bar">
-            <div class="bar__east">
-                <button class="bar__east_btn bar_all bar_bor1" id="bar__content1">東校舎1階</button>
-                <button class="bar__east_btn bar_all bar_bor2" id="bar__content2">東校舎2階</button>
-            </div>
-            <div class="bar__west">
-                <button class="bar__west_btn bar_all" id="bar__content3">西校舎1階</button>
-            </div>
-        </div>
         
+
         <div class="map">
-            <img class="map_img" id="img1" src="{% static 'main/images/map/東校舎1階.jpeg' %}" >
-            <img class="map_img" id="img2" src="{% static 'main/images/map/東校舎2階.jpeg' %}" >
-            <img class="map_img" id="img3" src="{% static 'main/images/map/西校舎1階.jpeg' %}" >
+            <div class="map__content">
+                <button class="map__content_button" id="bar__content1">東校舎1階</button>
+                <div class="map__content__area">
+                    <img class="map__content__area_img" id="img1" src="{% static 'main/images/map/東校舎1階.jpeg' %}" >
+                    <p class="map__content__area_txt1 map__content__area_txt">①</p>
+                    <p class="map__content__area_txt2 map__content__area_txt">②</p>
+                    <p class="map__content__area_txt3 map__content__area_txt">③</p>
+                    <p class="map__content__area_txt4 map__content__area_txt">④</p>
+                    <p class="map__content__area_txt5 map__content__area_txt">⑤</p>
+                    <p class="map__content__area_txt6 map__content__area_txt">⑥</p>
+                    <p class="map__content__area_txt7 map__content__area_txt">⑦</p>
+                    <p class="map__content__area_txt8 map__content__area_txt">⑧</p>
+                    <p class="map__content__area_txt9 map__content__area_txt">⑨</p>
+                    <p class="map__content__area_txt10 map__content__area_txt">⑩</p>
+                    <p class="map__content__area_txt11 map__content__area_txt">⑪</p>
+                    <p class="map__content__area_txt12 map__content__area_txt">⑫</p>
+                    <p class="map__content__area_txt13 map__content__area_txt">⑬</p>
+                </div>
+                <div class="map__content__detail">
+                    <p>①3年生学年展示</p>
+                    <p>②2年生音展委員企画</p>
+                    <p>③2年生学年展示</p>
+                    <p>④1年生音展委員企画</p>
+                    <p>⑤1年生学年展示</p>
+                    <p>⑥2年生英語科発表展示</p>
+                    <p>⑦English Tube 同好会</p>
+                    <p>⑧ピタゴラスイッチ</p>
+                    <p>⑨休憩室・アンケート</p>
+                    <p>⑩学校PR動画</p>
+                    <p>⑪生物部</p>
+                    <p>⑫生物部・化学部</p>
+                    <p>⑬化学部</p>
+                </div>
+            </div>
+            <div class="map__content">
+                <button class="map__content_button" id="bar__content1">東校舎2階</button>
+                <div class="map__content__area">
+                    <img class="map__content__area_img" id="img1" src="{% static 'main/images/map/東校舎2階.jpeg' %}" >
+                    <p class="map__content__area_txt14 map__content__area_txt">⑭</p>
+                    <p class="map__content__area_txt15 map__content__area_txt">⑮</p>
+                    <p class="map__content__area_txt16 map__content__area_txt">⑯</p>
+                    <p class="map__content__area_txt17 map__content__area_txt">⑰</p>
+                    <p class="map__content__area_txt18 map__content__area_txt">⑱</p>
+                    <p class="map__content__area_txt19 map__content__area_txt">⑲</p>
+                    <p class="map__content__area_txt20 map__content__area_txt">⑳</p>
+                    <p class="map__content__area_txt21 map__content__area_txt">㉑</p>
+                    <p class="map__content__area_txt22 map__content__area_txt">㉒</p>
+                    <p class="map__content__area_txt23 map__content__area_txt">㉓</p>
+                    <p class="map__content__area_txt24 map__content__area_txt">㉔</p>
+                    <p class="map__content__area_txt25 map__content__area_txt">㉕</p>
+                    <p class="map__content__area_txt26 map__content__area_txt">㉖</p>
+                    <p class="map__content__area_txt27 map__content__area_txt">㉗</p>
+                    <p class="map__content__area_txt28 map__content__area_txt">㉘</p>
+                    <p class="map__content__area_txt29 map__content__area_txt">㉙</p>
+                </div>
+                <div class="map__content__detail">
+                    <p>⑭ボカロ同好会</p>
+                    <p>⑮自動車同好会</p>
+                    <p>⑯教師特集</p>
+                    <p>⑰甲陽生の一日</p>
+                    <p>⑱謎解き同好会</p>
+                    <p>⑲将棋部</p>
+                    <p>⑳社会科作品展</p>
+                    <p>㉑生物作品展</p>
+                    <p>㉒社会Ⅰ部</p>
+                    <p>㉓学報部</p>
+                    <p>㉔数学同好会</p>
+                    <p>㉕天文部</p>
+                    <p>㉖物理部</p>
+                    <p>㉗社会Ⅱ部</p>
+                    <p>㉘図普委員会</p>
+                    <p>㉙クイズ</p>
+                </div>
+            </div>
+            <div class="map__content">
+                <button class="map__content_button" id="bar__content1">西校舎1階</button>
+                <div class="map__content__area">
+                    <img class="map__content__area_img" id="img1" src="{% static 'main/images/map/西校舎1階.jpeg' %}" >
+                    <p class="map__content__area_txt30 map__content__area_txt">㉚</p>
+                    <p class="map__content__area_txt31 map__content__area_txt">㉛</p>
+                    <p class="map__content__area_txt32 map__content__area_txt">㉜</p>
+                    <p class="map__content__area_txt33 map__content__area_txt">㉝</p>
+                    <p class="map__content__area_txt34 map__content__area_txt">㉞</p>
+                    <p class="map__content__area_txt35 map__content__area_txt">㉟</p>                    
+                </div>
+                <div class="map__content__detail">
+                    <p>㉚音楽会</p>
+                    <p>㉛技術作品展</p>
+                    <p>㉜美術作品展</p>
+                    <p>㉝美術部</p>
+                    <p>㉞キャップアート</p>
+                    <p>㉟体育館アトラクション</p>
+                </div>
+            </div>
+            
+        
         </div>
         
     </section>
@@ -35,4 +121,5 @@
 
 {% block extra_js %}
 <script src="{% static 'main/javascript/map.js' %}"></script>
+<!-- <script src="{% static 'main/javascript/map.js' %}"></script> -->
 {% endblock %}
