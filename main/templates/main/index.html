@@ -10,9 +10,9 @@
 
 {% block content %}{# index ページの中身を記述 #}
 
-    <main class="main"> <!-- メイン -->
+    <main class="main"> 
         
-        <!-- swiper.js-->
+        
         <div class="swiper mySwiper" id="swiper">
             <div class="swiper-wrapper" id="swiper-wrapper">
                 <div class="swiper-slide" id="swiper-slide">
@@ -60,14 +60,14 @@
                             <div class="clock"></div>
                     </div>
                 </div>
-                <!-- <p class="main__cowntdown__day_txt">日</p> -->
+                
             </div>
         </section>
         <article>
         <h2>今年のテーマは</h2>
         <h2 class="theme">  飛躍</h2>    
         </article>
-        <article class="main__article space"> <!-- お知らせ的な　食堂いつ　落とし物は　全面禁煙　上履き　講堂電話切れ　 -->
+        <article class="main__article space"> 
             <h2 class="slideContsL slideConts">お知らせ</h2>
         </article>
 
@@ -101,6 +101,6 @@
 {% endblock %}
 {% block extra_js %}{# 追加 JavaScript 用ブロック #}
 
-    <!-- <script src="{% static 'main/javascript/main.js' %}"></script> -->
+    <script src="{% static 'main/javascript/main.js' %}"></script>
     
 {% endblock %}   
