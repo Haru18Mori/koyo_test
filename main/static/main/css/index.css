@@ -7,14 +7,6 @@
   display: none;
 }
 
-@font-face {
-  font-family: ZenMaruGothic-Medium;
-  src: local(ZenMaruGothic-Medium) url("font/ZenMaruGothic-Medium.ttf");
-}
-@font-face {
-  font-family: ZenMaruGothic-Regular;
-  src: local(ZenMaruGothic-Regular) url("font/ZenMaruGothic-Regular.ttf");
-}
 html,
 body {
   position: relative;
