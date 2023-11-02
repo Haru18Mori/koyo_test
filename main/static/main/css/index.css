@@ -34,10 +34,23 @@ h2 {
   right: 0;
 }
 
+#info_detail {
+  font-size: 30px;
+}
+
 .theme {
   font-size: 100px;
   position: absolute;
   left: 170px;
+}
+
+#start {
+  font-size: x-large;
+  font-weight: 500;
+}
+
+#end {
+  margin-top: 40px;
 }
 
 .space {
@@ -51,6 +64,10 @@ h2 {
 
 p {
   font-size: large;
+}
+
+.key {
+  margin: 15px;
 }
 
 .header {
@@ -206,7 +223,7 @@ p {
 }
 
 .slideConts {
-  height: 200px;
+  height: 50px;
   margin: 40px auto;
   transition: 1s;
 }
