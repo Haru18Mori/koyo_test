@@ -3,7 +3,18 @@
 
 {% block extra_style %}{# 上書きするブロック名（extra_style）を指定して、index.html 専用の CSS を追加 #}
 <link rel="stylesheet" href="{% static 'main/css/news.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/base.css' %}">
 {% endblock %}
-
 {% block content %}
+<main>
+    <body>
+        <h3 class="head">お知らせ</h2>
+        <article>
+            <section>
+                <p>今日11月3日は文化の日,または<div class="important">音楽と展覧の会の日。</div><br>
+                いよいよ音展当日です。生徒たちが精一杯努力して作った作品、展示をお楽しみください！</p>
+            </section>
+        </article>
+    </body>
+</main>
 {% endblock %}
