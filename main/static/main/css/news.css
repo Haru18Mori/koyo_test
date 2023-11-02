@@ -1,0 +1,16 @@
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  text-align: center;
+}
+
+.important {
+  font-size: x-large;
+  text-decoration: underline;
+  text-decoration-color: darkseagreen;
+}/*# sourceMappingURL=news.css.map */
